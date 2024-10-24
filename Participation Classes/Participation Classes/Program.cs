@@ -6,9 +6,8 @@
         public int exp = 0;
 
 
-        public Character ()
+        public Character()
         {
-            name = "Not Assigned";
             Reset();
         }
 
@@ -18,7 +17,7 @@
         { 
             this.name = name;
         }
-        public void PrintStatsInfo()
+        public virtual void PrintStatsInfo()
         {
             Console.WriteLine("Hero: " + this.name + " - " + this.exp + " EXP");
         }
@@ -33,9 +32,15 @@
 
     public class Paladin : Character
     {
-        public Paladin(string name) : base(name)
-        {
+        public Weapon weapon;
 
+        public Paladin(string name, Weapon weapon) : base(name)
+        {
+            this.weapon = weapon;
+        }
+        public override void PrintStatsInfo()
+        {
+            Console.WriteLine("Hail " + this.name + " - take up your " + this.weapon.name + "!");
         }
     }
 
@@ -77,6 +82,7 @@
             hero.PrintStatsInfo();
             villain.PrintStatsInfo();
 
+
             villain.name = "Sir Kane the Brave";
 
             hero.PrintStatsInfo();
@@ -96,7 +102,7 @@
             warBow.PrintWeaponStats();
 
             //Experimenting with Inheritance
-            Paladin knight = new Paladin("Sir Arthur");
+            Paladin knight = new Paladin("Sir Arthur", huntingBow);
             knight.PrintStatsInfo();
 
         }
