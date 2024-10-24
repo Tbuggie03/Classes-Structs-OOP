@@ -63,6 +63,19 @@
             hero.PrintStatsInfo();
             villain.PrintStatsInfo();
 
+            //Testing value types
+            //note: hunting bow is declared above
+            Weapon warBow = huntingBow;
+
+            huntingBow.PrintWeaponStats();
+            warBow.PrintWeaponStats();
+
+            warBow.name = "War Bow";
+            warBow.damage = 155;
+
+            huntingBow.PrintWeaponStats();
+            warBow.PrintWeaponStats();
+
         }
     }
 }
