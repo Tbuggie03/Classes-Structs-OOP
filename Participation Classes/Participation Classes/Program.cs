@@ -109,6 +109,9 @@
             Adventurer mike = new Adventurer("Mike");
             mike.PrintStatsInfo();
 
+            Dude dave = new Dude("Dave");
+            dave.PrintStatsInfo();
+
         }
     }
 }
