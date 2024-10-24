@@ -4,6 +4,16 @@
     {
         public string name;
         public int exp = 0;
+
+        public Character ()
+        {
+            name = "Not Assigned";
+        }
+
+        public Character(string name)
+        { 
+            this.name = name;
+        }
     
     }
 
@@ -17,7 +27,10 @@
 
             Character hero = new Character();
             Console.WriteLine("Hero: " + hero.name + " - " + hero.exp + " EXP");
-            
+
+            Character heroine = new Character("Agatha");
+            Console.WriteLine("Hero: " + heroine.name + " - " + heroine.exp + " EXP");
+
         }
     }
 }
