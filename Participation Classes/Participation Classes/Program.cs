@@ -5,10 +5,14 @@
         public string name;
         public int exp = 0;
 
+
         public Character ()
         {
             name = "Not Assigned";
+            Reset();
         }
+
+
 
         public Character(string name)
         { 
@@ -18,6 +22,13 @@
         {
             Console.WriteLine("Hero: " + this.name + " - " + this.exp + " EXP");
         }
+
+        private void Reset()
+        {
+            this.name = "Not assigned";
+            this.exp = 0;
+        }
+
     }
 
     public struct Weapon
