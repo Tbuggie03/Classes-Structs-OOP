@@ -52,6 +52,17 @@
             Weapon huntingBow = new Weapon("Hunting Bow", 105);
             huntingBow.PrintWeaponStats();
 
+            //Testing reference types
+            Character villain = hero;
+
+            hero.PrintStatsInfo();
+            villain.PrintStatsInfo();
+
+            villain.name = "Sir Kane the Brave";
+
+            hero.PrintStatsInfo();
+            villain.PrintStatsInfo();
+
         }
     }
 }
