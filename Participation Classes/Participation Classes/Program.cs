@@ -31,6 +31,14 @@
 
     }
 
+    public class Paladin : Character
+    {
+        public Paladin(string name) : base(name)
+        {
+
+        }
+    }
+
     public struct Weapon
     {
         public string name;
@@ -86,6 +94,10 @@
 
             huntingBow.PrintWeaponStats();
             warBow.PrintWeaponStats();
+
+            //Experimenting with Inheritance
+            Paladin knight = new Paladin("Sir Arthur");
+            knight.PrintStatsInfo();
 
         }
     }
